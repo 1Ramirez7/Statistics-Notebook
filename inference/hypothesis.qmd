@@ -1,0 +1,59 @@
+---
+title: "Hypothesis Testing"
+subtitle: "can delete this if not needed"
+format: 
+  html:
+    page-layout: full
+    toc: true
+    code-fold: true
+    math: katex # katex, mathjax, none
+    code-tools: # this is to show source code
+      source: true 
+      toggle: false
+      caption: none
+    cache: false
+---
+
+
+
+test
+
+
+## Frequency distributions
+
+Constructing frequency distributions where $k$ is the smallest number of classes and $n$ the number of observations:
+
+1. Decide on the number of classes $k$ where $2^k > n$.
+2. Determine the class interval $i$ by $i \geq \frac{\text{max value - min value}}{k}$.
+3. Set individual class limits.
+4. Tally the values into the classes.
+5. Count the number of items in each class.
+
+
+
+## Sample mean
+
+$\bar{x} = \frac{\sum x}{n}$
+
+where:
+- $\bar{x}$ denotes the sample mean.
+- $n$ denotes the number of values in the sample.
+- $x$ denotes any value.
+
+
+## Median
+
+The midpoint of the values after they have been ordered from the minimum to the maximum values. The data must be at least an ordinal level of measurement.
+
+
+## Mode
+
+The value of the observation that appears most frequently. It is especially useful in summarizing ordinal level data.
+
+## Weighted mean
+
+$\bar{x}_{w} = \frac{w_1 x_1 + w_2 x_2 + \cdots + w_n x_n}{w_1 + w_2 + \cdots + w_n} = \frac{\sum\limits_{i=1}^n w_i x_i}{\sum\limits_{i=1}^n w_i}$
+
+where:
+- $\bar{x}_{w}$ denotes the weighted mean.
+- $w$ denotes the corresponding weight.

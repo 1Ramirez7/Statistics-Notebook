@@ -1,0 +1,15 @@
+---
+title: "Graphical Summaries"
+subtitle: "Visuals"
+format: 
+  html:
+    error: false
+    message: false
+    warning: false
+    toc: true
+    code-fold: true
+    css: styles.css
+    math: katex  
+---
+
+
