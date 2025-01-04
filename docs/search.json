@@ -4,7 +4,10 @@
     "href": "spacer.html",
     "title": "spacer",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "spacer"
+    ]
   },
   {
     "objectID": "inference/linearreg.html",
@@ -46,7 +49,10 @@
     "href": "graphicalsummaries.html",
     "title": "Graphical Summaries",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Graphical Summaries"
+    ]
   },
   {
     "objectID": "inference.html",
@@ -67,6 +73,9 @@
     "href": "numericalsummaries.html",
     "title": "Numerical Summaries",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Numerical Summaries"
+    ]
   }
 ]
