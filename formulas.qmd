@@ -27,8 +27,6 @@ Constructing frequency distributions where $k$ is the smallest number of classes
 4. Tally the values into the classes.
 5. Count the number of items in each class.
 
-
-
 **Sample mean**
 
 $\bar{x} = \frac{\sum x}{n}$

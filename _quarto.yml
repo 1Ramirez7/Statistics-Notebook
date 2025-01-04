@@ -5,6 +5,13 @@ project:
     - "*.qmd"
     - "!python.qmd"
     - "!extras/"
+    - "!readme.md"
+    # - "!formulas.qmd"
+    # - "!extra.qmd"
+    # - "!graphicalsummaries.qmd"
+    # - "!inference.qmd"
+    # - "!numericalsummaries.qmd"
+    # - "!spacer.qmd"
 
 freeze: auto
 
@@ -14,62 +21,64 @@ website:
   back-to-top-navigation: true
   repo-url: https://github.com/1Ramirez7/Portfolio_Template
   #repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line
-  
 
 
+# 
+# 
+#   page-footer: 
+#     border: true
+#     left: "Eduardo Ramirez 2024©"
+#     right: 
+#       - icon: linkedin
+#         href: https://www.linkedin.com/in/eduardo-ramirez-lds
+# 
+# 
+#   navbar:
+#     background: primary
+#     search: true   
+#     right:
+#       - text: "Home"
+#         file: index.qmd
+#       - text: "Inference"
+#         menu:
+#           - text: "Inference"
+#             file: inference.qmd
+#           - text: "Distribution"
+#             file: inference/distribution.qmd
+#           - text: "Hypothesis"
+#             file: inference/hypothesis.qmd
+#           - text: "Linear Reg"
+#             file: inference/linearreg.qmd
+#       - text: "Formulas"
+#         menu:
+#           - text: "Formulas"
+#             file: formulas.qmd
+#       - sidebar:describing_data
+#       - sidebar:spacer
+#       - text: "extra"
+#         file: extra.qmd
+# #      - text: "Python"
+# #        file: python.qmd
+# 
+# 
+# 
+#   sidebar:
+#     - id: describing_data
+#       title: "Describing Data"
+#       style: "docked"
+#       collapse-level: 1
+#       contents:
+#         - graphicalsummaries.qmd
+#         - numericalsummaries.qmd
+#           
+#     - id: spacer
+#       title: "spacer"
+#       style: "docked"
+#       collapse-level: 1
+#       contents:
+#         - spacer.qmd
 
-  page-footer: 
-    border: true
-    left: "Eduardo Ramirez 2024©"
-    right: 
-      - icon: linkedin
-        href: https://www.linkedin.com/in/eduardo-ramirez-lds
 
-
-  navbar:
-    background: primary
-    search: true   
-    right:
-      - text: "Home"
-        file: index.qmd
-      - text: "Inference"
-        menu:
-          - text: "Inference"
-            file: inference.qmd
-          - text: "Distribution"
-            file: inference/distribution.qmd
-          - text: "Hypothesis"
-            file: inference/hypothesis.qmd
-          - text: "Project 3"
-            file: inference/linearreg.qmd
-      - text: "Formulas"
-        menu:
-          - text: "Formulas"
-            file: formulas.qmd
-      - sidebar:describing_data
-      - sidebar:spacer
-      - text: "extra"
-        file: extra.qmd
-#      - text: "Python"
-#        file: python.qmd
-
-
-
-  sidebar:
-    - id: describing_data
-      title: "Describing Data"
-      style: "docked"
-      collapse-level: 1
-      contents:
-        - graphicalsummaries.qmd
-        - numericalsummaries.qmd
-          
-    - id: spacer
-      title: "spacer"
-      style: "docked"
-      collapse-level: 1
-      contents:
-        - spacer.qmd
 
 format:  
   html:

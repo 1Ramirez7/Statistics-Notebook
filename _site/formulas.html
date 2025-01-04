@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Statistics Formula Collection – Statistics Notebook</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Images/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-05173426cb4dfe3e719e4166a739d973.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7cbe8085d2cc1d8ba59f70b09efb9c81.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Statistics Notebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-inference" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Inference</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-inference">    
+        <li>
+    <a class="dropdown-item" href="./inference.html">
+ <span class="dropdown-text">Inference</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./inference/distribution.html">
+ <span class="dropdown-text">Distribution</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./inference/hypothesis.html">
+ <span class="dropdown-text">Hypothesis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./inference/linearreg.html">
+ <span class="dropdown-text">Linear Reg</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-formulas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Formulas</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-formulas">    
+        <li>
+    <a class="dropdown-item" href="./formulas.html">
+ <span class="dropdown-text">Formulas</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-describing-data" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Describing Data</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-describing-data">    
+        <li>
+    <a class="dropdown-item" href="./graphicalsummaries.html">
+ <span class="dropdown-text">Graphical Summaries</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./numericalsummaries.html">
+ <span class="dropdown-text">Numerical Summaries</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-spacer" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">spacer</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-spacer">    
+        <li>
+    <a class="dropdown-item" href="./spacer.html">
+ <span class="dropdown-text">spacer</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./extra.html"> 
+<span class="menu-text">extra</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Statistics Formula Collection</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Frequency distributions</strong></p>
+<p>Constructing frequency distributions where <span class="math inline">\(k\)</span> is the smallest number of classes and <span class="math inline">\(n\)</span> the number of observations:</p>
+<ol type="1">
+<li>Decide on the number of classes <span class="math inline">\(k\)</span> where <span class="math inline">\(2^k &gt; n\)</span>.</li>
+<li>Determine the class interval <span class="math inline">\(i\)</span> by <span class="math inline">\(i \geq \frac{\text{max value - min value}}{k}\)</span>.</li>
+<li>Set individual class limits.</li>
+<li>Tally the values into the classes.</li>
+<li>Count the number of items in each class.</li>
+</ol>
+<p><strong>Sample mean</strong></p>
+<p><span class="math inline">\(\bar{x} = \frac{\sum x}{n}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{x}\)</span> denotes the sample mean.</p></li>
+<li><p><span class="math inline">\(n\)</span> denotes the number of values in the sample.</p></li>
+<li><p><span class="math inline">\(x\)</span> denotes any value.</p></li>
+</ul>
+<p><strong>Median</strong></p>
+<p>The midpoint of the values after they have been ordered from the minimum to the maximum values. The data must be at least an ordinal level of measurement.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Mode</strong></p>
+<p>The value of the observation that appears most frequently. It is especially useful in summarizing ordinal level data.</p>
+<p><strong>Weighted mean</strong></p>
+<p><span class="math inline">\(\bar{x}_{w} = \frac{w_1 x_1 + w_2 x_2 + \cdots + w_n x_n}{w_1 + w_2 + \cdots + w_n} = \frac{\sum\limits_{i=1}^n w_i x_i}{\sum\limits_{i=1}^n w_i}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{x}_{w}\)</span> denotes the weighted mean.</p></li>
+<li><p><span class="math inline">\(w\)</span> denotes the corresponding weight.</p></li>
+</ul>
+<p><strong>Geometric mean</strong></p>
+<p>Geometric mean = <span class="math inline">\(\sqrt[n]{(x_{1})(x_{2}) \cdots (x_{n})}\)</span></p>
+<p>Useful in finding the <em>average change</em> of percentages, ratios, indices, or growth rates over time. The geometric mean will always be less than or equal to (never more than) the arithmetic mean. All data values must be <em>positive</em>. It is applied in Fisher’s Ideal Index.</p>
+<p><strong>Geometric mean for a rate increase over time</strong></p>
+<p>GM for a rate increase = <span class="math inline">\(\sqrt[n]{\frac{\text{value at end of period}}{\text{value at start of period}}} - 1\)</span></p>
+<p>Used to find an average percentage <em>increase</em> over time.</p>
+<p><strong>Range</strong></p>
+<p>Range = maximum value - minimum value</p>
+<p><strong>Population variance</strong></p>
+<p><span class="math inline">\(\sigma^2 = \frac{\sum (x - \mu)^2}{N}\)</span></p>
+<p>The population variance <span class="math inline">\(\sigma^2\)</span> mitigates the dilemma of a single sample. In one sample, the deviation between an observed value <span class="math inline">\(x\)</span> and the population mean <span class="math inline">\(\mu\)</span> might</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>differ greatly, while in another sample the deviation might differ significantly again. <span class="math inline">\(\sigma^2\)</span> provides a measure of the average variance accounting for all samples for one unit of the population.</p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\sigma^2\)</span> is the population variance.</p></li>
+<li><p><span class="math inline">\(x\)</span> is the value of a particular observation in the population.</p></li>
+<li><p><span class="math inline">\(\mu\)</span> is the arithmetic mean of the population.</p></li>
+<li><p><span class="math inline">\(N\)</span> is the number of observations in the population.</p></li>
+</ul>
+<p><strong>Population standard deviation</strong></p>
+<p><span class="math inline">\(\sigma = \sqrt{\frac{\sum (x - \mu)^2}{N}}\)</span></p>
+<p>The population standard deviation <span class="math inline">\(\sigma\)</span> mitigates the dilemma of a single sample (refer to population variance). In one sample, the deviation between an observed value <span class="math inline">\(x\)</span> and the population mean <span class="math inline">\(\mu\)</span> might differ greatly, while in another sample, the deviation might differ significantly again. <span class="math inline">\(\sigma\)</span> provides a measure of the average deviation accounting for all samples for one unit of the population, in the same unit of measure as the sample.</p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\sigma\)</span> is the population standard deviation.</p></li>
+<li><p><span class="math inline">\(x\)</span> is the value of a particular observation in the population.</p></li>
+<li><p><span class="math inline">\(\mu\)</span> is the arithmetic mean of the population.</p></li>
+<li><p><span class="math inline">\(N\)</span> is the number of observations in the population.</p></li>
+</ul>
+<p>By taking the square root of the variance, the deviation is now in the same unit of measurement as the original data.</p>
+<p><strong>Sample variance</strong></p>
+<p><span class="math inline">\(s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(s^2\)</span> is the sample variance.</p></li>
+<li><p><span class="math inline">\(x\)</span> is the value of each observation in the sample.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the mean of the sample.</p></li>
+<li><p><span class="math inline">\(n\)</span> is the number of observations in the sample.</p></li>
+<li><p>The denominator <span class="math inline">\((n - 1)\)</span> corrects its tendency for underestimation.</p></li>
+</ul>
+<p><strong>Sample standard deviation</strong></p>
+<p><span class="math inline">\(s = \sqrt{\frac{\sum (x - \bar{x})^2}{n - 1}}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(s\)</span> is the sample standard deviation.</p></li>
+<li><p><span class="math inline">\(x\)</span> is the value of each observation in the sample.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the mean of the sample.</p></li>
+<li><p><span class="math inline">\(n\)</span> is the number of observations in the sample.</p></li>
+<li><p>By taking the square root of the variance, the deviation is now in the same unit of measurement as the original data.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Chebyshev’s Theorem</strong></p>
+<p>For any set of observations (sample or population), the proportion of the values that lie within <em>k</em> standard deviations of the mean is at least <span class="math inline">\(1 - \frac{1}{k^2}\)</span>, where <em>k</em> is any value greater than 1.</p>
+<p><strong>Arithmetic mean of grouped data</strong></p>
+<p><span class="math inline">\(\bar{x} = \frac{\sum{fM}}{n}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the sample mean.</p></li>
+<li><p><span class="math inline">\(M\)</span> is the midpoint of each class.</p></li>
+<li><p><span class="math inline">\(f\)</span> is the frequency in each class.</p></li>
+<li><p><span class="math inline">\(n\)</span> is the total number of frequencies.</p></li>
+</ul>
+<p><strong>Standard deviation of grouped data</strong></p>
+<p><span class="math inline">\(s = \sqrt{\frac{\sum f(M - \bar{x})^2}{n - 1}}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(s\)</span> is the sample standard deviation.</p></li>
+<li><p><span class="math inline">\(M\)</span> is the midpoint of the class.</p></li>
+<li><p><span class="math inline">\(f\)</span> is the class frequency.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the mean of the sample.</p></li>
+<li><p><span class="math inline">\(n\)</span> is the number of observations in the sample.</p></li>
+</ul>
+<p><strong>Location of percentile</strong></p>
+<p><span class="math inline">\(L_{p} = (n + 1)\frac{P}{100}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(P\)</span> is the percentile.</p></li>
+<li><p><span class="math inline">\(n\)</span> is the number of observations.</p></li>
+<li><p><span class="math inline">\(L_{p}\)</span> is the location of the percentile.</p></li>
+</ul>
+<p><strong>Coefficient of Variation</strong></p>
+<p><span class="math inline">\(\text{CV} = \frac{s}{\bar{x}}(100)\)</span></p>
+<p>Note: Multiplying by 100 converts the decimal to a percent.</p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(s\)</span> is the sample standard deviation.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the sample mean.</p></li>
+</ul>
+<p><strong>Pearson’s coefficient of skewness</strong></p>
+<p><span class="math inline">\(\text{sk} = \frac{3(\bar{x} - \text{median})}{s}\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(s\)</span> is the sample standard deviation.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the sample mean.</p></li>
+</ul>
+</div>
+</div>
+<p>——————– page spacer ————————-</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Software coefficient of skewness</strong></p>
+<p><span class="math inline">\(\text{sk} = \frac{n}{(n - 1)(n - 2)}\left[\sum\left(\frac{x - \bar{x}}{s}\right)^{3}\right]\)</span></p>
+<p>where:</p>
+<ul>
+<li><p><span class="math inline">\(n\)</span> is the number of observations in the sample.</p></li>
+<li><p><span class="math inline">\(s\)</span> is the sample standard deviation.</p></li>
+<li><p><span class="math inline">\(\bar{x}\)</span> is the sample mean.</p></li>
+</ul>
+<p><strong>Classical probability</strong></p>
+<p><span class="math inline">\(\text{Probability of an event} = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}\)</span></p>
+<p><strong>Empirical probability</strong></p>
+<p><span class="math inline">\(\text{Probability of an event} = \frac{\text{Number of times event occurred in the past}}{\text{Total number of observations}}\)</span></p>
+<p><strong>Special Rule of Addition</strong></p>
+<p><span class="math inline">\(\text{P(A or B)} = P(A) + P(B)\)</span></p>
+<p>Events must be <em>mutually exclusive</em>.</p>
+<p><strong>Complement Rule</strong></p>
+<p><span class="math inline">\(P(A) = 1 - P(\sim A)\)</span></p>
+<p>Events <span class="math inline">\(A\)</span> and <span class="math inline">\(\sim A\)</span> are mutually exclusive and collectively exhaustive.</p>
+<p><strong>General Rule of Addition</strong></p>
+<p><span class="math inline">\(\text{P(A or B)} = P(A) + P(B) - P(A \text{ and } B)\)</span></p>
+<p>For events that are <em>not</em> mutually exclusive.</p>
+<p><strong>Special Rule of Multiplication</strong></p>
+<p><span class="math inline">\(\text{P(A and B)} = P(A)P(B)\)</span></p>
+<p>Requires that two events are <em>independent</em>, meaning the occurrence of one event has no effect on the probability of the occurrence of the other event.</p>
+<p><strong>General Rule of Multiplication</strong></p>
+<p><span class="math inline">\(\text{P(A and B)} = \text{P(A)}P(B \vert A)\)</span></p>
+<p>where: - <span class="math inline">\(P(B \vert A)\)</span> is the probability that <span class="math inline">\(B\)</span> will occur given that <span class="math inline">\(A\)</span> has already occurred (conditional probability). - The two events are <em>not independent</em>.</p>
+<p><strong>Bayes’ Theorem</strong></p>
+<p><span class="math inline">\(P(A_{i} \vert B) = \frac{P(A_{i})P(B \vert A_{i})}{P(A_{1})P(B \vert A_{1}) + P(A_{2})P(B \vert A_{2})}\)</span></p>
+<p>Events <span class="math inline">\(A_{1}\)</span> and <span class="math inline">\(A_{2}\)</span> are mutually exclusive and collectively exhaustive, and <span class="math inline">\(A_{i}\)</span> refers to either event <span class="math inline">\(A_{1}\)</span> or <span class="math inline">\(A_{2}\)</span>.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Multiplication Formula</strong></p>
+<p><span class="math inline">\(\text{Total number of arrangements} = (m)(n)\)</span></p>
+<p><strong>Permutation</strong></p>
+<p><span class="math inline">\({}_nP_{r} = \frac{n!}{(n - r)!}\)</span></p>
+<p>Any arrangement of <em>r</em> objects selected from a single group of <em>n</em> possible objects.</p>
+<p><strong>Combination Formula</strong></p>
+<p><span class="math inline">\({}_nC_{r} = \frac{n!}{r!(n - r)!}\)</span></p>
+<p>The order of the selected objects is <em>not important</em>.</p>
+<p><strong>Mean of a Probability Distribution</strong></p>
+<p><span class="math inline">\(\mu = \Sigma \left[ xP(x) \right]\)</span></p>
+<p>where: - <span class="math inline">\(\mu\)</span> is the population mean. - <span class="math inline">\(P(x)\)</span> is the probability. - <span class="math inline">\(x\)</span> is a particular value.</p>
+<p><strong>Variance of a Probability Distribution</strong></p>
+<p><span class="math inline">\(\sigma^{2} = \Sigma\left[ (x - \mu)^{2}P(x) \right]\)</span></p>
+<p>where: - <span class="math inline">\(\mu\)</span> is the mean. - <span class="math inline">\(P(x)\)</span> is the probability. - <span class="math inline">\(x\)</span> is a particular value.</p>
+<p><strong>Binomial Probability Distribution (with replacement)</strong></p>
+<p><span class="math inline">\(P(x) = {}_nC_{x}\pi^{x}(1 - \pi)^{n - x}\)</span></p>
+<p>where: - <span class="math inline">\(C\)</span> denotes a combination. - <span class="math inline">\(n\)</span> is the number of trials. - <span class="math inline">\(x\)</span> is the number of successes. - <span class="math inline">\(\pi\)</span> is the probability of a success on each trial.</p>
+<p><strong>Mean of a Binomial Distribution (with replacement)</strong></p>
+<p><span class="math inline">\(\mu = n\pi\)</span></p>
+<p>where: - <span class="math inline">\(\mu\)</span> is the probability mean. - <span class="math inline">\(n\)</span> is the number of trials. - <span class="math inline">\(\pi\)</span> is the probability of a success on each trial.</p>
+<p><strong>Variance of a Binomial Distribution (with replacement)</strong></p>
+<p><span class="math inline">\(\sigma^{2} = n\pi(1 - \pi)\)</span></p>
+<p>where: - <span class="math inline">\(n\)</span> is the total number of trials.</p>
+</div>
+</div>
+<p>——- page spacer ——————–</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\pi\)</span> is the probability of a success on each trial.</li>
+</ul>
+<p><strong>Hypergeometric Distribution (without replacement)</strong></p>
+<p><span class="math inline">\(P(x) = \frac{({}_SC_{x})(C^{N-S}_{n-x})}{{}_NC_{n}}\)</span></p>
+<p>where: - <span class="math inline">\(N\)</span> is the size of the population. - <span class="math inline">\(S\)</span> is the number of successes in the population. - <span class="math inline">\(x\)</span> is the number of successes in the sample (may be 0, 1, 2, 3, …). - <span class="math inline">\(n\)</span> is the size of the sample or the number of trials. - <span class="math inline">\(C\)</span> stands for a combination.</p>
+<p><strong>Poisson Distribution</strong></p>
+<p><span class="math inline">\(P(x) = \frac{\mu^{x}e^{-\mu}}{x!}\)</span></p>
+<p>where: - <span class="math inline">\(\mu\)</span> is the mean number of occurrences (successes) in a particular interval. - <span class="math inline">\(e\)</span> is the constant 2.71828 (base of the Naperian logarithmic system). - <span class="math inline">\(x\)</span> is the number of occurrences (successes). - <span class="math inline">\(P(x)\)</span> is the probability for a specified value of <span class="math inline">\(x\)</span>.</p>
+<p><strong>Mean of a Poisson Distribution</strong></p>
+<p><span class="math inline">\(\mu = n\pi\)</span></p>
+<p>where: - <span class="math inline">\(\pi\)</span> is the probability of success. - <span class="math inline">\(n\)</span> is the total number of trials.</p>
+<p>**Mean of the Uniform Distribution</p>
+<p><span class="math inline">\(\mu = \frac{a + b}{2}\)</span></p>
+<p>where: - <span class="math inline">\(\mu\)</span> is the mean.</p>
+<p><strong>Standard Deviation of the Uniform Distribution</strong></p>
+<p><span class="math inline">\(\sigma = \sqrt{\frac{(b - a)^2}{12}}\)</span></p>
+<p>where: - <span class="math inline">\(a\)</span> is the minimum value of the interval. - <span class="math inline">\(b\)</span> is the maximum value of the interval.</p>
+<p>**Uniform Distribution Probability</p>
+<p><span class="math inline">\(P(x) = (height)(base) = \frac{1}{b - a}(b - a)\)</span></p>
+<p>where:</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(a \leq x \leq b\)</span>, and <span class="math inline">\(P(x) = 0\)</span> elsewhere.</li>
+<li><span class="math inline">\(a\)</span> is the minimum value of the interval.</li>
+<li><span class="math inline">\(b\)</span> is the maximum value of the interval.</li>
+</ul>
+<p><strong>Normal Probability Distribution</strong></p>
+<p><span class="math inline">\(P(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\left[\frac{(x - \mu)^2}{2\sigma^2}\right]}\)</span></p>
+<p>where: - <span class="math inline">\(\sigma\)</span> is the standard deviation. - <span class="math inline">\(\mu\)</span> is the mean. - <span class="math inline">\(e\)</span> is a constant (base of the natural logarithm, approximately 2.718). - <span class="math inline">\(\pi\)</span> is a constant (approximately 3.1416). - <span class="math inline">\(x\)</span> is the value of the random variable.</p>
+<p><strong>Standard Normal Value (One Observation - <span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(z = \frac{x - \mu}{\sigma}\)</span></p>
+<p>This formula is used when calculating the <span class="math inline">\(z\)</span> value for <em>only one observation</em> is calculated.</p>
+<p>where: - <span class="math inline">\(z\)</span> denotes the signed distance between a selected value <span class="math inline">\(x\)</span> and the population mean <span class="math inline">\(\mu\)</span>, divided by the population standard deviation <span class="math inline">\(\sigma\)</span>. - <span class="math inline">\(x\)</span> is the value of any particular observation or measurement. - <span class="math inline">\(\mu\)</span> is the mean of the distribution. - <span class="math inline">\(\sigma\)</span> is the standard deviation of the distribution.</p>
+<p><strong>Continuity Correction Factor</strong></p>
+<ul>
+<li>If <span class="math inline">\(P(x) \geq x\)</span>, then use <span class="math inline">\((x - 0.5)\)</span>.</li>
+<li>If <span class="math inline">\(P(x) &gt; x\)</span>, then use <span class="math inline">\((x + 0.5)\)</span>.</li>
+<li>If <span class="math inline">\(P(x) \leq x\)</span>, then use <span class="math inline">\((x + 0.5)\)</span>.</li>
+<li>If <span class="math inline">\(P(x) &lt; x\)</span>, then use <span class="math inline">\((x - 0.5)\)</span>.</li>
+</ul>
+<p>The value 0.5 is subtracted or added to a selected value when a discrete probability distribution is approximated by a continuous probability distribution.</p>
+<p><strong>Exponential Distribution</strong></p>
+<p><span class="math inline">\(P(x) = \lambda e^{-\lambda x}\)</span></p>
+<p>where: - <span class="math inline">\(\lambda\)</span> is the rate parameter, with <span class="math inline">\(\lambda = \frac{1}{\mu}\)</span> or <span class="math inline">\(\mu = \frac{1}{\lambda}\)</span>. - <span class="math inline">\(e\)</span> is a constant (base of the natural logarithm, approximately 2.718). - <span class="math inline">\(x\)</span> is the value of the random variable. - Both the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>) are equal to <span class="math inline">\(\frac{1}{\lambda}\)</span>.</p>
+</div>
+</div>
+<p>————– page spacer ——————</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Probability of Exponential Distribution</strong></p>
+<p><span class="math inline">\(P(\text{arrival time $&lt; x$}) = 1 - e^{-\lambda x}\)</span></p>
+<p>where: - <span class="math inline">\(\lambda\)</span> is the rate parameter. - <span class="math inline">\(e\)</span> is a constant (base of the natural logarithm, approximately 2.718). - <span class="math inline">\(x\)</span> is the value of the random variable. - Both the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>) are equal to <span class="math inline">\(\frac{1}{\lambda}\)</span>.</p>
+<p><strong>Standard Error of the Mean</strong></p>
+<p><span class="math inline">\(\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span></p>
+<p>where: - <span class="math inline">\(\sigma_{\bar{x}}\)</span> is the standard deviation of the sample means indicated by <span class="math inline">\(\bar{x}\)</span>. - <span class="math inline">\(n\)</span> is the sample size. - <span class="math inline">\(\sigma\)</span> is the population standard deviation.</p>
+<p><strong>Standard Normal Value (More than One Observation - <span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}\)</span></p>
+<p>This formula is used in cases where the research refers to a <em>sample rather than just one observation</em>.</p>
+<p>where: - <span class="math inline">\(z\)</span> is the distance between a selected value, <span class="math inline">\(\bar{x}\)</span>, and the population mean <span class="math inline">\(\mu\)</span>, divided by the standard error of the mean <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>. - <span class="math inline">\(\bar{x}\)</span> is the sample mean. - <span class="math inline">\(\mu\)</span> is the population mean. - <span class="math inline">\(\sigma\)</span> is the population standard deviation. - <span class="math inline">\(n\)</span> is the sample size.</p>
+<p><strong>Confidence Interval for a Population Mean (<span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(\bar{x} \pm z\frac{\sigma}{\sqrt{n}}\)</span></p>
+<p>where: - <span class="math inline">\(z\)</span> is the standardized distance from the mean <span class="math inline">\(\mu\)</span>. - <span class="math inline">\(\bar{x}\)</span> is the sample mean. - <span class="math inline">\(\sigma\)</span> is the population standard deviation. - <span class="math inline">\(n\)</span> is the sample size.</p>
+<p><strong>Confidence Interval for a Population Mean (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(\bar{x} \pm t \frac{s}{\sqrt{n}}\)</span></p>
+<p>where: - <span class="math inline">\(t\)</span> refers to the t distribution.</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\bar{x}\)</span> is the sample mean.</li>
+<li><span class="math inline">\(s\)</span> is the sample standard deviation.</li>
+<li><span class="math inline">\(n\)</span> is the sample size.</li>
+</ul>
+<p><strong>Sample Proportion</strong></p>
+<p><span class="math inline">\(p = \frac{x}{n}\)</span></p>
+<p>where: - <span class="math inline">\(p\)</span> is the sample proportion. - <span class="math inline">\(x\)</span> is the number of successes. - <span class="math inline">\(n\)</span> is the sample size.</p>
+<p><strong>Confidence Interval for a Population Proportion</strong></p>
+<p><span class="math inline">\(p \pm z \sqrt{\frac{p(1-p)}{n}}\)</span></p>
+<p>where: - <span class="math inline">\(p\)</span> is the sample proportion, an estimate for the population proportion <span class="math inline">\(\pi\)</span>. - <span class="math inline">\(z\)</span> is the standard distance from the mean <span class="math inline">\(\mu\)</span>. - <span class="math inline">\(n\)</span> is the sample size.</p>
+<p><strong>Sample Size for Estimating the Population Mean</strong></p>
+<p><span class="math inline">\(E = z\frac{\sigma}{\sqrt{n}} \quad \text{solved for } n \text{ yields} \quad n = \left(\frac{z\sigma}{E}\right)^2\)</span></p>
+<p>where: - <span class="math inline">\(n\)</span> is the sample size. - <span class="math inline">\(z\)</span> is the standard distance from the mean <span class="math inline">\(\mu\)</span>. - <span class="math inline">\(\sigma\)</span> is the population standard deviation. - <span class="math inline">\(E\)</span> is the maximum allowable error.</p>
+<p><strong>Sample Size for the Population Proportion</strong></p>
+<p><span class="math inline">\(E = z\sqrt{\frac{\pi (1 - \pi)}{n}} \quad \text{solved for } n \text{ yields} \quad n = \pi (1-\pi)\left(\frac{z}{E}\right)^2\)</span></p>
+<p>where: - <span class="math inline">\(n\)</span> is the size of the sample. - <span class="math inline">\(z\)</span> is the standard normal value corresponding to the desired level of confidence. - <span class="math inline">\(\pi\)</span> is the population proportion. - <span class="math inline">\(E\)</span> is the maximum allowable error.</p>
+<p><strong>Finite-Population Correction Factor</strong></p>
+<p><span class="math inline">\(FPC = \sqrt{\frac{N - n}{N - 1}}\)</span></p>
+<p>To be used if the sample is a significant part of a finite population.</p>
+<p>where: - <span class="math inline">\(n\)</span> is the size of the sample. - <span class="math inline">\(N\)</span> is the size of the population.</p>
+</div>
+</div>
+<p>————— page spacer ————–</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Testing a Mean (<span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}\)</span></p>
+<p>The <span class="math inline">\(z\)</span> value is based on the sampling distribution of the sample mean <span class="math inline">\(\bar{x}\)</span>, which follows the normal distribution with the sampling mean <span class="math inline">\(\mu_{\bar{x}}\)</span> equal to the population mean <span class="math inline">\(\mu\)</span> and a standard error of the mean <span class="math inline">\(\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span>.</p>
+<p>where: - <span class="math inline">\(z\)</span> is the distance between a selected value, <span class="math inline">\(\bar{x}\)</span>, and the mean <span class="math inline">\(\mu\)</span>, divided by the standard error of the mean <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>. - <span class="math inline">\(\bar{x}\)</span> is the sample mean. - <span class="math inline">\(\mu\)</span> is the population mean. - <span class="math inline">\(\sigma\)</span> is the population standard deviation. - <span class="math inline">\(n\)</span> is the sample size.</p>
+<p><strong>Testing a Mean (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(t = \frac{\bar{x} - \mu}{\frac{s}{\sqrt{n}}}\)</span></p>
+<p>with <span class="math inline">\(n-1\)</span> degrees of freedom.</p>
+<p>where: - <span class="math inline">\(\bar{x}\)</span> is the sample mean. - <span class="math inline">\(\mu\)</span> is the hypothesized population mean. - <span class="math inline">\(s\)</span> is the sample standard deviation. - <span class="math inline">\(n\)</span> is the number of observations in the sample.</p>
+<p><strong>Type II Error</strong></p>
+<p><span class="math inline">\(z = \frac{\bar{x}_{C} - \mu_{1}}{\frac{\sigma}{\sqrt{n}}}\)</span></p>
+<p>where: - <span class="math inline">\(\bar{x}_{C}\)</span> is the sample mean of region C. - <span class="math inline">\(\mu_{1}\)</span> is the hypothesized population mean of region C. - <span class="math inline">\(\sigma\)</span> is the population standard deviation. - <span class="math inline">\(n\)</span> is the number of observations in the sample.</p>
+<p><strong>Two-Sample Test – Variance of the Distribution of Differences (<span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(\sigma^{2}_{\bar{x_{1}} - \bar{x_{2}}} = \frac{\sigma^{2}_{1}}{n_{1}} + \frac{\sigma^{2}_{2}}{n_{2}}\)</span></p>
+<p>where: - <span class="math inline">\(\sigma^{2}_{\bar{x_{1}} - \bar{x_{2}}}\)</span> is the variance of the differences in means. - <span class="math inline">\(\bar{x}_{1}\)</span> and <span class="math inline">\(\bar{x}_{2}\)</span> are the sample means of the first and second sample, respectively. - <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are the sample sizes.</p>
+<p><strong>Two-Sample Test – Test of Means (<span class="math inline">\(\sigma\)</span> Known)</strong></p>
+<p><span class="math inline">\(z = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{\frac{\sigma^{2}_{1}}{n_{1}} + \frac{\sigma^{2}_{2}}{n_{2}}}}\)</span></p>
+</div><div class="column" style="width:50%;">
+<p>This formula applies under the following conditions: 1. The sampled populations are approximately normally distributed. 2. The sampled populations are independent. 3. The standard deviations of the two populations are <em>known</em>.</p>
+<p>where: - <span class="math inline">\(z\)</span> is the standard value. - <span class="math inline">\(\bar{x}_{1}\)</span> and <span class="math inline">\(\bar{x}_{2}\)</span> are the sample means. - <span class="math inline">\(\sigma^{2}_{1}\)</span> and <span class="math inline">\(\sigma^{2}_{2}\)</span> are the population variances. - <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are the sample sizes.</p>
+<p><strong>Two-Sample Test – Pooled Variance (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(s^{2}_{p} = \frac{(n_{1} - 1)s^{2}_{1} + (n_{2} - 1)s^{2}_{2}}{n_{1} + n_{2} - 2}\)</span></p>
+<p>This formula assumes the following conditions: 1. The sampled populations are approximately normally distributed. 2. The sampled populations are independent. 3. The standard deviations of the two populations are <em>equal</em>.</p>
+<p>The formula computes a weighted mean of the two sample variances using the degrees of freedom that each sample provides. The resulting value serves as an estimate for the unknown population standard deviation. Pooling is used because it assumes the two populations have <em>equal standard deviations</em>, and combining the sample information provides the best estimate of the population standard deviation.</p>
+<p>where: - <span class="math inline">\(s^{2}_{p}\)</span> is the pooled variance. - <span class="math inline">\(s^{2}_{1}\)</span> and <span class="math inline">\(s^{2}_{2}\)</span> are the variances of the first and second samples, respectively. - <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are the sample sizes of the first and second samples, respectively. - <span class="math inline">\(n_{1} + n_{2} - 2\)</span> is the degrees of freedom (<span class="math inline">\(df\)</span>).</p>
+<p><strong>Two-Sample Test – Test of Means (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(t = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{s^{2}_{p}\left(\frac{1}{n_{1}} + \frac{1}{n_{2}}\right)}}\)</span></p>
+<p>Notes - The pooled variance <span class="math inline">\(s^{2}_{p}\)</span> must be computed beforehand. Prerequisites: 1. The sampled populations are approximately normally distributed. 2. The sampled populations are independent.</p>
+</div>
+</div>
+<p>———– page spacer ———————-</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol start="3" type="1">
+<li>The standard deviations of the two populations are <strong>equal</strong>.</li>
+</ol>
+<ul>
+<li>The <strong>Wilcoxon rank-sum test</strong>is an alternative to the Two-Sample t test and does <strong>not</strong>require normal distribution or equal variances.</li>
+</ul>
+<p>where: - <span class="math inline">\(\bar{x}_{1}\)</span>: Mean of the first sample. - <span class="math inline">\(\bar{x}_{2}\)</span>: Mean of the second sample. - <span class="math inline">\(n_{1}\)</span>: Number of observations in the first sample. - <span class="math inline">\(n_{2}\)</span>: Number of observations in the second sample. - <span class="math inline">\(s^{2}_{p}\)</span>: Pooled estimate of the population variance.</p>
+<p><strong>Two-Sample Test – Test Statistic for No Difference in Means, Unequal Variances (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(t = \frac{\bar{x}_{1} - \bar{x}_{2}}{\sqrt{\frac{s^{2}_{1}}{n_{1}} + \frac{s^{2}_{2}}{n_{2}}}}\)</span></p>
+<p>Note This formula assumes that both sample variances are <strong>unequal</strong>. Unlike the pooled variance approach, the denominator splits into two components using <span class="math inline">\(s^{2}_{1}\)</span> and <span class="math inline">\(s^{2}_{2}\)</span> as variances.</p>
+<p>where: - <span class="math inline">\(\bar{x}_{1}\)</span>: Mean of the first sample. - <span class="math inline">\(\bar{x}_{2}\)</span>: Mean of the second sample. - <span class="math inline">\(s^{2}_{1}\)</span>: Sample variance of the first sample. - <span class="math inline">\(s^{2}_{2}\)</span>: Sample variance of the second sample. - <span class="math inline">\(n_{1}\)</span>: Number of observations in the first sample. - <span class="math inline">\(n_{2}\)</span>: Number of observations in the second sample.</p>
+<p><strong>Two-Sample Test – Degrees of Freedom for Unequal Variance Test (<span class="math inline">\(\sigma\)</span> Unknown)</strong></p>
+<p><span class="math inline">\(df = \frac{\left[\frac{s^{2}_{1}}{n_{1}} + \frac{s^{2}_{2}}{n_{2}}\right]^{2}}{\frac{\left(\frac{s^{2}_{1}}{n_{1}}\right)^{2}}{n_{1} - 1} + \frac{\left(\frac{s^{2}_{2}}{n_{2}}\right)^{2}}{n_{2} - 1}}\)</span></p>
+<p>where: - <span class="math inline">\(df\)</span> is the degree of freedom. - <span class="math inline">\(s^{2}_{1}\)</span> is the sample variance of the first sample. - <span class="math inline">\(s^{2}_{2}\)</span> is the sample variance of the second sample. - <span class="math inline">\(n_{1}\)</span> is the number of observations in the first sample. - <span class="math inline">\(n_{2}\)</span> is the number of observations in the second sample.</p>
+<p><strong>Two-Sample Test – Standard Deviation of Differences</strong></p>
+<p><span class="math inline">\(s_{d} = \sqrt{\frac{\sum(d - \bar{d})^2}{n - 1}}\)</span></p>
+<p>where: - <span class="math inline">\(\bar{d}\)</span> is the mean of the difference between the paired or related observations. - <span class="math inline">\(s_{d}\)</span> is the standard deviation of the differences between the paired or related observations. - <span class="math inline">\(n\)</span> is the number of paired observations.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Two-Sample Test – Paired <span class="math inline">\(t\)</span> Test</strong></p>
+<p><span class="math inline">\(t = \frac{\bar{d}}{\frac{s_{d}}{\sqrt{n}}}\)</span></p>
+<p>This test reduces variation from the sampling distribution compared to independent samples but usually has fewer degrees of freedom (<span class="math inline">\(n-1\)</span>).</p>
+<p>An alternative for <em>dependent samples</em> is the <strong>Wilcoxon signed-rank test</strong>, which does not require the normality assumption.</p>
+<p>where: - <span class="math inline">\(\bar{d}\)</span> is the mean of the difference between the paired or related observations. - <span class="math inline">\(s_{d}\)</span> is the standard deviation of the differences between the paired or related observations. - <span class="math inline">\(n\)</span> is the number of paired observations.</p>
+<p><strong>ANOVA – Test Statistic for Comparing Two Variances</strong></p>
+<p><span class="math inline">\(F = \frac{s^{2}_{1}}{s^{2}_{2}}\)</span></p>
+<p>where: - <span class="math inline">\(s^{2}_{1}\)</span> is the sample variance of the first sample. - <span class="math inline">\(s^{2}_{2}\)</span> is the sample variance of the second sample. - <span class="math inline">\(F\)</span> represents the F distribution.</p>
+<p>If the null hypothesis is true, the test statistic follows the <span class="math inline">\(F\)</span> distribution with <span class="math inline">\(n_{1} - 1\)</span> and <span class="math inline">\(n_{2} - 1\)</span> degrees of freedom.</p>
+<p><strong>ANOVA – Critical Value for F Statistic</strong></p>
+<p><span class="math inline">\(F = \frac{k - 1}{n - k}\)</span></p>
+<p>where: - <span class="math inline">\(F\)</span> represents the F distribution. - <span class="math inline">\(k\)</span> is the number of treatments. - <span class="math inline">\(n\)</span> is the total number of observations.</p>
+<p>In ANOVA, the critical value of the F statistic determines whether the null hypothesis <span class="math inline">\(H_{0}\)</span> can be rejected.</p>
+<p><strong>ANOVA – Components</strong></p>
+<p>The sum of the squared differences between the following defines the ANOVA terms:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 42%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>(a) Each Observation</th>
+<th>(b) Overall Mean or Treatment Mean</th>
+<th>(c) ANOVA Term</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overall mean</td>
+<td>Each observation</td>
+<td><strong>Total variation</strong></td>
+</tr>
+<tr class="even">
+<td>Overall mean</td>
+<td>Each treatment mean</td>
+<td><strong>Treatment variation</strong></td>
+</tr>
+<tr class="odd">
+<td>Treatment mean</td>
+<td>Each observation</td>
+<td><strong>Random variation</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>———- page spacer ————————-</p>
+<p><strong>Assumptions for ANOVA</strong> - The samples are from independent populations. - The population variances must be equal. - The samples are from normal populations.</p>
+<p>If these assumptions are not met, the <strong>Kruskal-Wallis</strong>nonparametric test is recommended.</p>
+<p><strong>ANOVA Table (One-Way)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 37%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source of Variation</th>
+<th>SS</th>
+<th>df</th>
+<th>Mean Square</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Treatments</td>
+<td>SST</td>
+<td><span class="math inline">\(k-1\)</span></td>
+<td><span class="math inline">\(\frac{SST}{(k-1)} = MST\)</span></td>
+<td><span class="math inline">\(\frac{MST}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td>SSE</td>
+<td><span class="math inline">\(n-k\)</span></td>
+<td><span class="math inline">\(\frac{SSE}{(n-k)} = MSE\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>SS Total</td>
+<td><span class="math inline">\(n-1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>where: - <span class="math inline">\(n\)</span>: Total number of observations. - <span class="math inline">\(k\)</span>: Number of treatments. - <span class="math inline">\(SS\)</span>: Sum of squares. - <span class="math inline">\(SST\)</span>: Sum of squares due to treatments, calculated as <span class="math inline">\(\text{SS total} - SSE\)</span> or <span class="math inline">\(\sum{(\bar{x}_C - \bar{x}_G)^2}\)</span>, where <span class="math inline">\(\bar{x}_C\)</span> is the treatment mean and <span class="math inline">\(\bar{x}_G\)</span> is the overall mean. - <span class="math inline">\(SSE\)</span>: Sum of squares due to errors, calculated as <span class="math inline">\(\sum{(x - \bar{x}_C)^2}\)</span>, where <span class="math inline">\(x\)</span> is each observation and <span class="math inline">\(\bar{x}_C\)</span> is the treatment mean. - <span class="math inline">\(\text{SS Total}\)</span>: Total variation, calculated as <span class="math inline">\(\sum{(x - \bar{x}_G)^2}\)</span>, where <span class="math inline">\(x\)</span> is each observation and <span class="math inline">\(\bar{x}_G\)</span> is the overall mean. - <span class="math inline">\(MST\)</span>: Mean square for treatments, an estimate of variance. - <span class="math inline">\(MSE\)</span>: Mean square for errors.</p>
+<p><strong>ANOVA: Confidence Interval for the Difference in Treatment Means</strong></p>
+<p><span class="math inline">\((\bar{x}_{1} - \bar{x}_{2}) \pm t\sqrt{\text{MSE}\left(\frac{1}{n_{1}} + \frac{1}{n_{2}}\right)}\)</span></p>
+<p>where: - <span class="math inline">\(\bar{x}_{1}\)</span>: Mean of the first sample. - <span class="math inline">\(\bar{x}_{2}\)</span>: Mean of the second sample. - <span class="math inline">\(t\)</span>: t distribution with degrees of freedom equal to <span class="math inline">\(n-k\)</span>. - <span class="math inline">\(MSE\)</span>: Mean square error term from the ANOVA table <span class="math inline">\(\left[\frac{SSE}{n-k}\right]\)</span>. - <span class="math inline">\(n_{1}\)</span>: Number of observations in the first sample. - <span class="math inline">\(n_{2}\)</span>: Number of observations in the second sample.</p>
+<p><strong>ANOVA: Two-Way – Sum of Squares Blocks</strong></p>
+<p><span class="math inline">\(\text{SSB} = k\sum(\bar{x}_{b} - \bar{x}_{G})^{2}\)</span></p>
+<p>where: - <span class="math inline">\(k\)</span>: Number of treatments. - <span class="math inline">\(b\)</span>: Number of blocks. - <span class="math inline">\(\bar{x}_{b}\)</span>: Sample mean of block <span class="math inline">\(b\)</span>. - <span class="math inline">\(\bar{x}_{G}\)</span>: Overall mean.</p>
+<p>———– page spacer ————</p>
+<p>**ANOVA: Two-Way – Table*</p>
+<p><strong>ANOVA Table (Two-Way)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source of Variation</th>
+<th>SS</th>
+<th>df</th>
+<th>Mean Square</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Treatments</td>
+<td>SST</td>
+<td><span class="math inline">\(k-1\)</span></td>
+<td><span class="math inline">\(\frac{SST}{(k-1)} = MST\)</span></td>
+<td><span class="math inline">\(\frac{MST}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Blocks</td>
+<td>SSB</td>
+<td><span class="math inline">\(b-1\)</span></td>
+<td><span class="math inline">\(\frac{SSB}{(b-1)} = MSB\)</span></td>
+<td><span class="math inline">\(\frac{MSB}{MSE}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Error</td>
+<td>SSE</td>
+<td><span class="math inline">\((k-1)(b-1)\)</span></td>
+<td><span class="math inline">\(\frac{SSE}{(k-1)(b-1)} = MSE\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>SS Total</td>
+<td><span class="math inline">\(n-1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>where: - <span class="math inline">\(n\)</span>: Total number of observations. - <span class="math inline">\(k\)</span>: Number of treatments. - <span class="math inline">\(SS\)</span>: Sum of squares. - <span class="math inline">\(SST\)</span>: Sum of squares due to treatments, calculated as <span class="math inline">\(\sum{(\bar{x}_C - \bar{x}_G)^2}\)</span> or <span class="math inline">\(\text{SS Total} - SSE - SSB\)</span>. - <span class="math inline">\(SSB\)</span>: Sum of squares blocks, calculated as <span class="math inline">\(k\sum{(\bar{x}_{b} - \bar{x}_{G})^2}\)</span>, where <span class="math inline">\(\bar{x}_b\)</span> is the block mean and <span class="math inline">\(\bar{x}_G\)</span> is the overall mean. - <span class="math inline">\(SSE\)</span>: Sum of squares due to errors, calculated as <span class="math inline">\(\sum{(x - \bar{x}_C)^2}\)</span>, where <span class="math inline">\(\bar{x}_C\)</span> is the treatment mean. - <span class="math inline">\(\text{SS Total}\)</span>: Total variation, calculated as <span class="math inline">\(\sum{(x - \bar{x}_G)^2}\)</span>, where <span class="math inline">\(x\)</span> is each sample observation and <span class="math inline">\(\bar{x}_G\)</span> is the overall mean. - <span class="math inline">\(MST\)</span>: Mean square for treatments, an estimate of variance. - <span class="math inline">\(MSB\)</span>: Mean square for blocks. - <span class="math inline">\(MSE\)</span>: Mean square for errors.</p>
+<p><strong>Illustration of Two-Way ANOVA</strong></p>
+<p>The following is an illustration of how the different variations relate:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/anova.png" class="img-fluid figure-img"></p>
+<figcaption>Illustration of a Two-Way ANOVA</figcaption>
+</figure>
+</div>
+<p>————– page spacer ————–</p>
+<p>**ANOVA: Two-Way with Interaction (Factors) – Table</p>
+<p>ANOVA Table with Interaction (Factors)</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source of Variation</th>
+<th>SS</th>
+<th>df</th>
+<th>Mean Square</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Factor A</td>
+<td>SSA</td>
+<td><span class="math inline">\(k-1\)</span></td>
+<td><span class="math inline">\(\frac{SSA}{(k-1)} = MSA\)</span></td>
+<td><span class="math inline">\(\frac{MSA}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Factor B</td>
+<td>SSB</td>
+<td><span class="math inline">\(b-1\)</span></td>
+<td><span class="math inline">\(\frac{SSB}{(b-1)} = MSB\)</span></td>
+<td><span class="math inline">\(\frac{MSB}{MSE}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Interaction</td>
+<td>SSI</td>
+<td><span class="math inline">\((k-1)(b-1)\)</span></td>
+<td><span class="math inline">\(\frac{SSI}{(k-1)(b-1)} = MSI\)</span></td>
+<td><span class="math inline">\(\frac{MSI}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td>SSE</td>
+<td><span class="math inline">\(n-kb\)</span></td>
+<td><span class="math inline">\(\frac{SSE}{(n-kb)} = MSE\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>SS Total</td>
+<td><span class="math inline">\(n-1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>————– page spacer ————-</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Linear Regression: Correlation Coefficient</strong></p>
+<p><span class="math inline">\(r = \frac{\sum(x-\bar{x})(y-\bar{y})}{(n-1)s_{x}s_{y}}\)</span></p>
+<p>Subject A measure of the strength of the linear relationship between two variables, ranging from <span class="math inline">\(-1\)</span> to <span class="math inline">\(+1\)</span>.</p>
+<p>Notes - The correlation coefficient is independent of scale if <span class="math inline">\(\sum(x-\bar{x})(y-\bar{y})\)</span> is divided by <span class="math inline">\(s_{x}\)</span> and <span class="math inline">\(s_{y}\)</span>. - It becomes independent of sample size when divided by <span class="math inline">\((n-1)\)</span>. - Correlation between two independent variables is uncritical if <span class="math inline">\(-0.70 &lt; r &lt; 0.70\)</span>. For a more precise test, use the variance inflation factor (VIF).</p>
+<p>where: - <span class="math inline">\(r\)</span>: Correlation coefficient. - <span class="math inline">\(x\)</span>: Variable value of the x population. - <span class="math inline">\(y\)</span>: Variable value of the y population. - <span class="math inline">\(\bar{x}\)</span>: Mean of variable values in the x population. - <span class="math inline">\(\bar{y}\)</span>: Mean of variable values in the y population. - <span class="math inline">\(n\)</span>: Number of observations in the sample. - <span class="math inline">\((n-1)\)</span>: Degrees of freedom. - <span class="math inline">\(s_{x}\)</span>: Standard deviation of the x population. - <span class="math inline">\(s_{y}\)</span>: Standard deviation of the y population.</p>
+<p><strong>Linear Regression: t Test for the Correlation Coefficient <span class="math inline">\(r\)</span></strong></p>
+<p><span class="math inline">\(t = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}\)</span></p>
+<p>Subject: Resolves the question about whether there could be zero correlation in the population from which the sample was selected.</p>
+<p>where - <span class="math inline">\(r\)</span>: Correlation coefficient. - <span class="math inline">\(n\)</span>: Number of observations in the sample.</p>
+<p>**Linear Regression Equation: General Form</p>
+<p><span class="math inline">\(\hat{y} = a + bx\)</span></p>
+<p>Subject An equation that expresses the linear relationship between two variables.</p>
+<p>where: - <span class="math inline">\(\hat{y}\)</span>: Estimated value of the <span class="math inline">\(y\)</span> variable for a selected <span class="math inline">\(x\)</span> value. - <span class="math inline">\(a\)</span>: Y-intercept. It is the estimated value of <span class="math inline">\(y\)</span> when <span class="math inline">\(x = 0\)</span>. - <span class="math inline">\(b\)</span>: Slope of the line, or the average change in <span class="math inline">\(\hat{y}\)</span> for each change of one unit (either increase or decrease) in the independent variable <span class="math inline">\(x\)</span>. - <span class="math inline">\(x\)</span>: Any value of the independent variable that is selected.</p>
+<p><strong>Linear Regression: Slope of Regression Line</strong></p>
+<p><span class="math inline">\(b = r\left(\frac{s_{y}}{s_{x}}\right)\)</span></p>
+<p>where: - <span class="math inline">\(r\)</span>: Correlation coefficient.</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(s_{y}\)</span>: Standard deviation of <span class="math inline">\(y\)</span> (the dependent variable).</li>
+<li><span class="math inline">\(s_{x}\)</span>: Standard deviation of <span class="math inline">\(x\)</span> (the independent variable).</li>
+</ul>
+<p><strong>Linear Regression: Y-Intercept</strong></p>
+<p><span class="math inline">\(a = \bar{y} - b\bar{x}\)</span></p>
+<p>where: - <span class="math inline">\(\bar{y}\)</span>: Mean of <span class="math inline">\(y\)</span> (the dependent variable). - <span class="math inline">\(\bar{x}\)</span>: Mean of <span class="math inline">\(x\)</span> (the independent variable).</p>
+<p><strong>Linear Regression: t Test for the Slope <span class="math inline">\(b\)</span></strong></p>
+<p><span class="math inline">\(t = \frac{b - 0}{s_{b}}\)</span></p>
+<p>Subject: Conducts a test on whether the slope of the regression line is different from zero. In such a circumstance, we can reasonably conclude that the regression line adds to the predictive ability of the regression equation.</p>
+<p>where: - <span class="math inline">\(b\)</span>: Estimate of the regression line’s slope calculated from the sample information. - <span class="math inline">\(s_{b}\)</span>: Standard error of the slope estimate, also determined from sample information. - Degrees of freedom: <span class="math inline">\(n-2\)</span>.</p>
+<p><strong>Linear Regression: Standard Error of Estimate</strong></p>
+<p><span class="math inline">\(s_{y \cdotp x} = \sqrt{\frac{\sum(y-\hat{y})^2}{n-2}} = \sqrt{\frac{\text{SSE}}{n-2}}\)</span></p>
+<p>Subject: A relative measure of a regression equation’s ability to predict.</p>
+<p>where: - <span class="math inline">\(s_{y \cdotp x}\)</span>: Standard error of estimate with <span class="math inline">\(y \cdotp x\)</span> interpreted as the standard error of <span class="math inline">\(y\)</span> for a given value of <span class="math inline">\(x\)</span>. It is analogous to the standard deviation, measuring dispersion around a mean. - <span class="math inline">\(y\)</span>: Observed value. - <span class="math inline">\(\hat{y}\)</span>: Predicted value. - <span class="math inline">\(\sum(y-\hat{y})^2\)</span>: Sum of squares error (SSE) or residuals.</p>
+<p><strong>Linear Regression: Coefficient of Determination</strong></p>
+<p><span class="math inline">\(r^2 = \frac{\text{SSR}}{\text{SS Total}} = \frac{\sum(\hat{y}-\bar{y})^2}{\sum(y-\bar{y})^2} = 1 - \frac{\text{SSE}}{\text{SS Total}} = 1 - \frac{\sum(y-\hat{y})^2}{\sum(y-\bar{y})^2}\)</span></p>
+<p>Subject: The proportion of the total variation in the dependent variable <span class="math inline">\(y\)</span> that is explained, or accounted for, by the variation in the independent variable <span class="math inline">\(x\)</span>.</p>
+<p>where: - <strong>SS Total</strong>: Total variation (sum of squares total). - <strong>SSR</strong>: Sum of squares regression. - <strong>SSE</strong>: Sum of squares errors or residuals.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Linear Regression: Confidence Interval for the Mean of <span class="math inline">\(y\)</span> Given <span class="math inline">\(x\)</span></strong></p>
+<p><span class="math inline">\(\hat{y} \pm t s_{y \cdotp x}\sqrt{\frac{1}{n}+\frac{(x-\bar{x})^2}{\sum(x-\bar{x})^2}}\)</span></p>
+<p>Subject: Applied when the regression equation is used to predict the <em>mean value of <span class="math inline">\(y\)</span></em> for a given value of <span class="math inline">\(x\)</span>.</p>
+<p>where: - <span class="math inline">\(x\)</span>: Given value. - <span class="math inline">\(\bar{x}\)</span>: Sample mean. - <span class="math inline">\(\hat{y}\)</span>: Predicted value. - <span class="math inline">\(s_{y \cdotp x}\)</span>: Standard error of estimate, interpreted as the standard error of <span class="math inline">\(y\)</span> for a given value of <span class="math inline">\(x\)</span>. Similar to the standard deviation, measuring dispersion around a mean.</p>
+<p><strong>Linear Regression: Prediction Interval for <span class="math inline">\(y\)</span> Given <span class="math inline">\(x\)</span></strong></p>
+<p><span class="math inline">\(\hat{y} \pm t s_{y \cdotp x}\sqrt{1+\frac{1}{n}+\frac{(x-\bar{x})^2}{\sum(x-\bar{x})^2}}\)</span></p>
+<p>Subject: Applied when the regression equation is used to predict an <em>individual value of <span class="math inline">\(y\)</span> (<span class="math inline">\(n = 1\)</span>)</em> for a given value of <span class="math inline">\(x\)</span>. Refer to the confidence interval equation for comparison.</p>
+<p>where: - <span class="math inline">\(x\)</span>: Given value. - <span class="math inline">\(\bar{x}\)</span>: Sample mean. - <span class="math inline">\(\hat{y}\)</span>: Predicted value. - <span class="math inline">\(s_{y \cdotp x}\)</span>: Standard error of estimate, interpreted as the standard error of <span class="math inline">\(y\)</span> for a given value of <span class="math inline">\(x\)</span>. Similar to the standard deviation, measuring dispersion around a mean.</p>
+<p><strong>Multiple Regression: General Equation</strong></p>
+<p><span class="math inline">\(\hat{y} = a + b_{1}x_{1} + b_{2}x_{2} + b_{3}x_{3} + ... + b_{k}x_{k}\)</span></p>
+<p>Subject: Enhanced equation of the linear regression formula for more than one dependent variable.</p>
+<p>where: - <span class="math inline">\(a\)</span>: Intercept, the value of <span class="math inline">\(\hat{y}\)</span> when all the <span class="math inline">\(x\)</span>’s are zero. - <span class="math inline">\(b_{j}\)</span>: The amount by which <span class="math inline">\(\hat{y}\)</span> changes when that particular <span class="math inline">\(x_{j}\)</span> increases by one unit, with the values of all other independent variables held constant. - <span class="math inline">\(k\)</span>: Number of independent variables.</p>
+<p><strong>Multiple Regression: Standard Error of Estimate</strong></p>
+<p><span class="math inline">\(s_{y \cdotp 123 \cdotp k} = \sqrt{\frac{\sum(y-\hat{y})^2}{n-(k+1)}} = \sqrt{\frac{\text{SSE}}{n-(k+1)}} = \sqrt{\text MSE}\)</span></p>
+<p>Subject: A relative measure of a regression equation’s ability to predict for more than one independent variable.</p>
+<p>where: - <span class="math inline">\(y\)</span>: Actual observation. - <span class="math inline">\(\hat{y}\)</span>: Estimated value computed from the regression equation.</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(n\)</span>: Number of observations in the sample.</li>
+<li><span class="math inline">\(k\)</span>: Number of independent variables.</li>
+<li><span class="math inline">\(SSE\)</span>: Residual sum of squares from an ANOVA table, equal to <span class="math inline">\(\sum(y-\hat{y})^2\)</span>.</li>
+</ul>
+<p><strong>Multiple Regression ANOVA – Table</strong></p>
+<p><strong>Multiple Regression ANOVA Table</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 18%">
+<col style="width: 29%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>SS</th>
+<th>df</th>
+<th>MS</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Regression</td>
+<td>SSR</td>
+<td><span class="math inline">\(k\)</span></td>
+<td><span class="math inline">\(MSR = \frac{SSR}{k}\)</span></td>
+<td><span class="math inline">\(\frac{MSR}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Residual or error</td>
+<td>SSE</td>
+<td><span class="math inline">\(n-(k+1)\)</span></td>
+<td><span class="math inline">\(MSE = \frac{SSE}{n-(k+1)}\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>SS Total</td>
+<td><span class="math inline">\(n-1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multiple Regression: Coefficient of Multiple Determination</strong></p>
+<p><span class="math inline">\(R^2 = \frac{\text{SSR}}{\text{SS Total}}\)</span></p>
+<p>Subject: The percent of variation in the dependent variable, <span class="math inline">\(y\)</span>, explained by the set of independent variables, <span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(x_{3}\)</span>, … <span class="math inline">\(x_{k}\)</span>.</p>
+<p>where: - <strong>SS Total</strong>: Total variation (sum of squares total). - <strong>SSR</strong>: Sum of squares regression.</p>
+<p><strong>Multiple Regression: Adjusted Coefficient of Multiple Determination</strong></p>
+<p><span class="math inline">\(R^2_{adj} = \frac{\frac{SSE}{n-(k+1)}}{\frac{\text{SS Total}}{n-1}}\)</span></p>
+<p>Subject: The percent of variation in the dependent variable, <span class="math inline">\(y\)</span>, explained by the set of independent variables, <span class="math inline">\(x_{1}\)</span>, <span class="math inline">\(x_{2}\)</span>, <span class="math inline">\(x_{3}\)</span>, … <span class="math inline">\(x_{k}\)</span>.</p>
+<p>As more independent variables are added to the multiple regression model, <span class="math inline">\(R^2\)</span> tends to increase. If the number of variables, <span class="math inline">\(k\)</span>, and the sample size, <span class="math inline">\(n\)</span>, are equal, the coefficient of determination becomes 1. To avoid this trend, <span class="math inline">\(R^2\)</span> is adjusted.</p>
+<p>where: - <strong>SS Total</strong>: Total variation (sum of squares total). - <strong>SSE</strong>: Sum of squares error or residual.</p>
+<p><strong>Multiple Regression: Global Test</strong></p>
+<p><span class="math inline">\(F = \frac{\frac{\text{SSR}}{k}}{\frac{\text{SSE}}{n-(k+1)}}\)</span></p>
+<p>Subject: The Global Test investigates whether it is possible that all the independent variables have zero regression coefficients. It compares the sum of squares regression per unit of sum of squares residuals. The higher the explained variances compared to the residual variances, the more positive the value of the F distribution.</p>
+<p>where: - <strong>SSR</strong>: Sum of squares regression.</p>
+</div>
+</div>
+<p>————- page spacer —————–</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><strong>SSE</strong>: Sum of squares error or residual.</li>
+<li><span class="math inline">\(n\)</span>: Number of observations in the sample.</li>
+<li><span class="math inline">\(k\)</span>: Number of independent variables.</li>
+</ul>
+<p><strong>Multiple Regression: t Test Individual Coefficients <span class="math inline">\(b\)</span></strong></p>
+<p><span class="math inline">\(t = \frac{b_{j} - 0}{s_{b_{j}}}\)</span></p>
+<p>Subject: Tests the independent variables individually to determine whether the regression coefficients differ from zero. If a regression coefficient is likely to be zero, it does not contribute to the regression equation’s ability to predict.</p>
+<p>where: - <span class="math inline">\(b_{j}\)</span>: Any one of the regression coefficients. - <span class="math inline">\(s_{b_{j}}\)</span>: Standard error of the slope estimate, determined from sample information.</p>
+<p><strong>Multiple Regression: Variance Inflation Factor</strong></p>
+<p><span class="math inline">\(VIF = \frac{1}{1 - R^2_{j}}\)</span></p>
+<p>Subject: A VIF greater than 10 is considered unsatisfactory, indicating that the independent variable should be removed from the analysis.</p>
+<p>where: - <span class="math inline">\(R^2_{j}\)</span>: Coefficient of determination.</p>
+<p><strong>Test of Hypothesis: One Proportion</strong></p>
+<p><span class="math inline">\(z = \frac{p - \pi}{\sqrt{\frac{\pi(1 - \pi)}{n}}}\)</span></p>
+<p>where: - <span class="math inline">\(\pi\)</span>: Population proportion. - <span class="math inline">\(p\)</span>: Sample proportion. - <span class="math inline">\(n\)</span>: Sample size.</p>
+<p><strong>Test of Hypothesis: Pooled Proportion</strong></p>
+<p><span class="math inline">\(p_c = \frac{x_1 + x_2}{n_1 + n_2}\)</span></p>
+<p>where: - <span class="math inline">\(p_{c}\)</span>: Pooled proportion possessing the trait in the combined samples (pooled estimate of the population proportion). - <span class="math inline">\(x_1\)</span>: Number possessing the trait in the first sample. - <span class="math inline">\(x_2\)</span>: Number possessing the trait in the second sample. - <span class="math inline">\(n_{1}\)</span>: Number of observations in the first sample. - <span class="math inline">\(n_{2}\)</span>: Number of observations in the second sample.</p>
+<p><strong>Test of Hypothesis: Two-Sample Test of Proportions</strong></p>
+<p><span class="math inline">\(z = \frac{p_{1} - p_{2}}{\sqrt{\frac{p_{c}(1 - p_{c})}{n_{1}} + \frac{p_{c}(1 - p_{c})}{n_{2}}}}\)</span></p>
+<p>where: - <span class="math inline">\(n_{1}\)</span>: Number of observations in the first sample.</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(n_{2}\)</span>: Number of observations in the second sample.</li>
+<li><span class="math inline">\(p_{1}\)</span>: Proportion in the first sample possessing the trait.</li>
+<li><span class="math inline">\(p_{2}\)</span>: Proportion in the second sample possessing the trait.</li>
+<li><span class="math inline">\(p_{c}\)</span>: Pooled proportion possessing the trait in the combined samples (pooled estimate of the population proportion).</li>
+</ul>
+<p><strong>Chi-Square Test Statistic</strong></p>
+<p><span class="math inline">\(\chi^2 = \sum\left[\frac{(f_o - f_e)^2}{f_e}\right]\)</span></p>
+<p>Degrees of Freedom <span class="math inline">\(k - 1\)</span></p>
+<p>where: - <span class="math inline">\(k\)</span>: Number of categories. - <span class="math inline">\(f_o\)</span>: Observed frequency in a particular category. - <span class="math inline">\(f_e\)</span>: Expected frequency in a particular category.</p>
+<p><strong>Expected Frequency</strong></p>
+<p><span class="math inline">\(f_e = \frac{\text{(row total) \text{(column total)}}}{\text{(grand total)}}\)</span></p>
+<p>where: - <span class="math inline">\(f_e\)</span>: Expected frequency in a particular category.</p>
+<p>Sign Test: <span class="math inline">\(n &gt; 10\)</span></p>
+<p><span class="math inline">\(z = \frac{(x \pm 0.50) - \mu}{\sigma}\)</span></p>
+<p>where: - <span class="math inline">\(z\)</span>: Standard value. - <span class="math inline">\(\pm 0.50\)</span>: Continuity correction factor. - <span class="math inline">\(x\)</span>: Number of plus (<span class="math inline">\(+\)</span>) or minus (<span class="math inline">\(-\)</span>) signs. - <span class="math inline">\(\mu\)</span>: Population mean. - <span class="math inline">\(\sigma\)</span>: Population standard deviation.</p>
+<p><strong>Sign Test: <span class="math inline">\(n &gt; 10\)</span>, + Signs More Than <span class="math inline">\(n/2\)</span></strong></p>
+<p><span class="math inline">\(z = \frac{(x - 0.50) - \mu}{\sigma} = \frac{(x - 0.50) - 0.50n}{0.50\sqrt{n}}\)</span></p>
+<p>where:</p>
+</div>
+</div>
+<p>—————– page spacer ———————-</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(z\)</span>: Standard value.</li>
+<li><span class="math inline">\(\pm 0.50\)</span>: Continuity correction factor.</li>
+<li><span class="math inline">\(x\)</span>: Number of plus (<span class="math inline">\(+\)</span>) or minus (<span class="math inline">\(-\)</span>) signs.</li>
+<li><span class="math inline">\(n\)</span>: Sample size.</li>
+<li><span class="math inline">\(\mu\)</span>: Population mean.</li>
+<li><span class="math inline">\(\sigma\)</span>: Population standard deviation.</li>
+</ul>
+<p><strong>Sign Test: <span class="math inline">\(n &gt; 10\)</span>, + Signs </strong>Less<strong>Than <span class="math inline">\(n/2\)</span></strong></p>
+<p><span class="math inline">\(z = \frac{(x + 0.50) - \mu}{\sigma} = \frac{(x + 0.50) - 0.50n}{0.50\sqrt{n}}\)</span></p>
+<p>where: - <span class="math inline">\(z\)</span>: Standard value. - <span class="math inline">\(\pm 0.50\)</span>: Continuity correction factor. - <span class="math inline">\(x\)</span>: Number of plus (<span class="math inline">\(+\)</span>) or minus (<span class="math inline">\(-\)</span>) signs. - <span class="math inline">\(n\)</span>: Sample size. - <span class="math inline">\(\mu\)</span>: Population mean. - <span class="math inline">\(\sigma\)</span>: Population standard deviation.</p>
+<p><strong>Wilcoxon Rank-Sum Test</strong></p>
+<p><span class="math inline">\(z = \frac{W - \frac{n_1(n_1 + n_2 + 1)}{2}}{\sqrt{\frac{n_1n_2(n_1 + n_2 + 1)}{12}}}\)</span></p>
+<p>Subject: This test is specifically designed to determine whether two <em>independent samples</em> came from equivalent populations.</p>
+<p>Note This test is an alternative to the Two-Sample t test but does <strong>not</strong>require that the two populations follow the normal distribution or have equal population variances.</p>
+<p>where: - <span class="math inline">\(n_1\)</span>: Number of observations of the first population. - <span class="math inline">\(n_2\)</span>: Number of observations of the second population. - <span class="math inline">\(W\)</span>: Sum of the ranks from the first population.</p>
+<p><strong>Kruskal-Wallis Test</strong></p>
+<p><span class="math inline">\(H = \frac{12}{n(n + 1)}\left[\frac{(\sum R_1)^2}{n_1} + \frac{(\sum R_2)^2}{n_2} + ... + \frac{(\sum R_k)^2}{n_k}\right] - 3(n+1)\)</span></p>
+<p>Note For the Kruskal-Wallis test to be applied, the samples selected from the populations must be independent. If the following prerequisites are met, an ANOVA analysis can be applied instead: - The samples are from independent populations. - The population variances must be equal. - The samples are from normal populations.</p>
+<p><strong>Degrees of Freedom</strong> <span class="math inline">\(k-1\)</span>, where <span class="math inline">\(k\)</span> is the number of populations.</p>
+<p>where: - <span class="math inline">\(\sum R_1, \sum R_2, ..., \sum R_k\)</span>: Sums of the ranks of samples 1, 2, …, <span class="math inline">\(k\)</span>. - <span class="math inline">\(n_1, n_2, ..., n_k\)</span>: Sizes of samples 1, 2, …, <span class="math inline">\(k\)</span>. - <span class="math inline">\(n\)</span>: Combined number of observations for all samples.</p>
+<p><strong>Spearman’s Coefficient of Rank Correlation</strong></p>
+<p><span class="math inline">\(r_s = 1 - \frac{6\sum d^2}{n(n^2 - 1)}\)</span></p>
+<p>where: - <span class="math inline">\(r_s\)</span>: Spearman’s coefficient of rank correlation. - <span class="math inline">\(d\)</span>: Difference between the ranks for each pair. - <span class="math inline">\(n\)</span>: Number of paired observations.</p>
+<p><strong>Hypothesis Test: Rank Correlation</strong></p>
+<p><span class="math inline">\(t = r_s\sqrt{\frac{n - 2}{1 - r_s^2}}\)</span></p>
+<p>where:</p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(r_s\)</span>: Spearman’s coefficient of rank correlation.</li>
+</ul>
+<p><strong>Index Numbers: Simple Index</strong></p>
+<p><span class="math inline">\(P = \frac{p_t}{p_0} \times 100\)</span></p>
+<p>where: - <span class="math inline">\(p_0\)</span>: Base-period price. - <span class="math inline">\(p_t\)</span>: Given period price.</p>
+<p><strong>Index Numbers: Simple Average of the Price Relatives</strong></p>
+<p><span class="math inline">\(P = \frac{\sum P_i}{n}\)</span></p>
+<p>Note - <strong>Advantage</strong>: Simple price indices are not dependent on the unit of measure of the item quantified. - <strong>Disadvantage</strong>: Simple price indices do not account for the relative importance of the items included.</p>
+<p>The lack of consideration for the relative importance of items is addressed by the Laspeyres price index and the Paasche price index.</p>
+<p>where: - <span class="math inline">\(P_i\)</span>: Simple index for each of the items. - <span class="math inline">\(n\)</span>: Number of items.</p>
+<p><strong>Index Numbers: Simple Aggregate Index</strong></p>
+<p><span class="math inline">\(P = \frac{\sum p_t}{\sum p_0} \times 100\)</span></p>
+<p>Note Since the aggregate index is influenced by the unit of measure, it is not used frequently.</p>
+<p>where: - <span class="math inline">\(p_0\)</span>: Base-period price. - <span class="math inline">\(p_t\)</span>: Given period price.</p>
+<p><strong>Index Numbers: Laspeyres Price Index</strong></p>
+<p><span class="math inline">\(P = \frac{\sum p_t q_0}{\sum p_0 q_0} \times 100\)</span></p>
+<p>Note The Laspeyres price index assumes that the base-period quantities still have a significant bearing on the current price index and are realistic. This contrasts with the assumption of the Paasche price index.</p>
+<p>where: - <span class="math inline">\(P\)</span>: Price index. - <span class="math inline">\(p_t\)</span>: Current price. - <span class="math inline">\(p_0\)</span>: Price in the base period. - <span class="math inline">\(q_0\)</span>: Quantity used in the base period.</p>
+<p><strong>Index Numbers: Paasche Price Index</strong></p>
+<p><span class="math inline">\(P = \frac{\sum p_t q_t}{\sum p_0 q_t} \times 100\)</span></p>
+<p>Note The Paasche price index assumes current period quantity levels as the base to account for changed preferences in consumed quantities. This contrasts with the assumption of the Laspeyres price index.</p>
+<p>where:</p>
+</div>
+</div>
+<p>————— page spacer ———————</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(P\)</span>: Price index.</li>
+<li><span class="math inline">\(p_t\)</span>: Current price.</li>
+<li><span class="math inline">\(p_0\)</span>: Price in the base period.</li>
+<li><span class="math inline">\(q_t\)</span>: Quantity used in the current period.</li>
+</ul>
+<p><strong>Index Numbers: Fisher’s Ideal Index</strong></p>
+<p><span class="math inline">\(\text{Fisher's Ideal Index} = \sqrt{\text{(Laspeyres index)}\text{(Paasche index)}}\)</span></p>
+<p>Note Fisher’s Ideal Index is a geometric mean of the Laspeyres and Paasche price indices.</p>
+<p><strong>Index Numbers: Value Index</strong></p>
+<p><span class="math inline">\(V = \frac{\sum p_t q_t}{\sum p_0 q_0} \times 100\)</span></p>
+<p>where: - <span class="math inline">\(P\)</span>: Price index. - <span class="math inline">\(p_t\)</span>: Current price. - <span class="math inline">\(p_0\)</span>: Price in the base period. - <span class="math inline">\(q_0\)</span>: Quantity used in the base period.</p>
+<p><strong>Index Numbers: Real Income</strong></p>
+<p><span class="math inline">\(\text{Real income} = \frac{\text{Money income}}{\text{CPI}} \times 100\)</span></p>
+<p>where: - <span class="math inline">\(CPI\)</span>: Consumer price index.</p>
+<p><strong>Index Numbers: Index as a Deflator</strong></p>
+<p><span class="math inline">\(\text{Deflated sales} = \frac{\text{Actual sales}}{\text{An appropriate index}} \times 100\)</span></p>
+<p><strong>Index Numbers: Index for Purchasing Power</strong></p>
+<p><span class="math inline">\(\text{Purchasing power of dollar} = \frac{\text{\$1}}{\text{CPI}} \times 100\)</span></p>
+<p><strong>Time Series &amp; Forecasting: Linear Trend Equation</strong></p>
+<p><span class="math inline">\(\hat{y} = a + bt\)</span></p>
+<p>where: - <span class="math inline">\(\hat{y}\)</span>: Projected value of the <span class="math inline">\(y\)</span> variable for a selected value of <span class="math inline">\(t\)</span>. - <span class="math inline">\(a\)</span>: Y-intercept, the estimated value of <span class="math inline">\(y\)</span> when <span class="math inline">\(t = 0\)</span>. - <span class="math inline">\(b\)</span>: Slope of the line, or the average change in <span class="math inline">\(\hat{y}\)</span> for each increase of one unit in <span class="math inline">\(t\)</span>. - <span class="math inline">\(t\)</span>: Any value of time that is selected.</p>
+<p><strong>Time Series &amp; Forecasting: Log Trend Equation</strong></p>
+<p><span class="math inline">\(\log \hat{y} = \log a + \log b(t)\)</span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Time Series &amp; Forecasting: Correction Factor for Adjusting Quarterly Means</strong> <span class="math inline">\(\text{Correction factor} = \frac{4.00}{\text{Total of four means}}\)</span></p>
+<p><strong>Time Series &amp; Forecasting: Durbin-Watson Statistic</strong></p>
+<p><span class="math inline">\(d = \frac{\sum_{t = 2}^{n} (e_t - e_{t-1})^2}{\sum_{t = 1}^n(e_t)^2}\)</span></p>
+</div>
+</div>
+<p>LaTeX Template: Two Column Colour Article</p>
+<p>Source: http://www.howtotex.com/ Feel free to distribute this template, but please keep the referal to howtotex.com. Date: Feb 2011</p>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Eduardo Ramirez 2024©</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/eduardo-ramirez-lds">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

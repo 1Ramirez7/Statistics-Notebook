@@ -12,32 +12,27 @@ format:
     math: katex  
 ---
 
-
-
-
 **Sampling Distributions**
 
 Key points about modality and skewness in sampling distributions:
 
 Modality:
 
-- Unimodal: A sampling distribution with only one prominent peak.
+-   Unimodal: A sampling distribution with only one prominent peak.
 
-- Bimodal: A sampling distribution with two distinct peaks.
+-   Bimodal: A sampling distribution with two distinct peaks.
 
-- Multimodal: A sampling distribution with more than two peaks.
+-   Multimodal: A sampling distribution with more than two peaks.
 
-- Uniform: In a uniform distribution, every value within a specified range has an equal probability of occurring, creating a flat horizontal line when visualized on a graph.
+-   Uniform: In a uniform distribution, every value within a specified range has an equal probability of occurring, creating a flat horizontal line when visualized on a graph.
 
 Skewness:
 
-- Positive Skewness (Right Skewed): The tail of the distribution extends further to the right side, meaning there are a few very high values compared to the majority of lower values.
+-   Positive Skewness (Right Skewed): The tail of the distribution extends further to the right side, meaning there are a few very high values compared to the majority of lower values.
 
-- Negative Skewness (Left Skewed): The tail of the distribution extends further to the left side, indicating a few very low values compared to most higher values.
+-   Negative Skewness (Left Skewed): The tail of the distribution extends further to the left side, indicating a few very low values compared to most higher values.
 
-- Zero Skewness (Symmetrical): The distribution is balanced with the left and right sides mirroring each other. 
-
-
+-   Zero Skewness (Symmetrical): The distribution is balanced with the left and right sides mirroring each other.
 
 ```{r}
 
@@ -66,10 +61,6 @@ ggplot(data.frame(x = runif(1000, -5, 5)), aes(x)) +
 
 ```
 
-
-
-
-
 ```{r}
 
 # Positive Skew
@@ -90,28 +81,20 @@ ggplot(data.frame(x = rnorm(1000)), aes(x)) +
 
 ```
 
-
-
 Key Differences Between General and Sampling Distributions
 
+------------------------------------------------------------------------
 
-----------------------------------------------------------
-
-| **Aspect**            | **General Distributions**                                               | **Sampling Distributions**                                                     |
-|------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| **Focus**             | Distribution of raw data or random variables                           | Distribution of a statistic (e.g., sample mean, proportion)                   |
-| **Population or Sample** | Describes population or a single sample                               | Derived from repeated sampling of a population                                 |
-| **Examples**          | Normal, Uniform, Exponential                                           | Sampling distribution of sample mean, proportion, etc.                        |
-| **Derived From**      | Directly observed data                                                 | Repeatedly calculated from samples                                            |
-| **Shape**             | Depends on the data (e.g., normal, skewed)                             | Depends on sample size and population (Central Limit Theorem often applies)   |
-| **Role in Statistics**| Describe the data or population characteristics                        | Used for inferential statistics (e.g., confidence intervals, hypothesis testing) |
-
-
-
-
+| **Aspect** | **General Distributions** | **Sampling Distributions** |
+|----------------|---------------------------|------------------------------|
+| **Focus** | Distribution of raw data or random variables | Distribution of a statistic (e.g., sample mean, proportion) |
+| **Population or Sample** | Describes population or a single sample | Derived from repeated sampling of a population |
+| **Examples** | Normal, Uniform, Exponential | Sampling distribution of sample mean, proportion, etc. |
+| **Derived From** | Directly observed data | Repeatedly calculated from samples |
+| **Shape** | Depends on the data (e.g., normal, skewed) | Depends on sample size and population (Central Limit Theorem often applies) |
+| **Role in Statistics** | Describe the data or population characteristics | Used for inferential statistics (e.g., confidence intervals, hypothesis testing) |
 
 **Example 2.12 Student Math Performance econometrics**
-
 
 ```{r}
 #| label: example-2-10.r
@@ -121,3 +104,289 @@ data(wage1, package='wooldridge')
 lm( log(wage) ~ educ, data=wage1 )
 
 ```
+
+
+
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**Frequency Distributions for categorical data**
+
+ A frequency distribution is a table used to organize data. The left column 
+(called classes or groups) includes all possible responses on a variable being 
+studied. The right column is a list of the frequencies, or number of observa
+tions, for each class. (see png 27813)(book278 1.3)
+
+
+**Relative frequency Distribution** 
+
+is obtained by dividing 
+each frequency by the number of observations and multiplying the resulting 
+proportion by 100%.  (see png 27813)(book278 1.3)
+
+
+
+
+
+**Frequency Distributions for numerical data**
+
+Book278 1.5
+
+Similar to a frequency distribution for categorical data (Section1.3), a frequency distribution for numerical data is a table that summarizes data by listing the classes in the left column and the number of observations in each class in the right column. However, the classes, or intervals, for a frequency distribution of numerical data are not as easily identifiable. Determining the classes of a frequency distribution for numerical data requires an swers to certain questions: How many classes should be used? How wide should each class be?
+
+**Cumulative Frequency Distribution** 
+
+ A cumulative frequency distribution contains the total number of observations 
+whose values are less than the upper limit for each class. We construct a  
+cumulative frequency distribution by adding the frequencies of all frequency 
+distribution classes up to and including the present class.  (see png 27815) (ECON278 1.5)
+
+
+**Relative Cumulative Frequency Distribution**
+
+In a relative cumula
+tive frequency distribution, cumulative frequencies can be expressed as cu
+mulative proportions or percents. (ECON278 1.5) (see png 27815)
+
+
+::::
+:::: {.column width="50%"}
+
+![27813](../images/27813.png)
+
+**Construction of a Frequency Distribution**
+![](../images/278131.png)
+
+![27815](../images/27815.png)
+
+::::
+:::
+
+
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**Shape of a Distribution**
+
+We can describe graphically the shape of the distribution by a histogram. That is, we can 
+visually determine whether data are evenly spread from its middle or center. Sometimes 
+the center of the data divides a graph of the distribution into two “mirror images,” so that the portion on one side of the middle is nearly identical to the portion on the other 
+side. Graphs that have this shape are symmetric; those without this shape are asymmetric, 
+or skewed. 
+
+**Symmetry**
+
+The shape of a distribution is said to be symmetric if the observations are bal
+anced, or approximately evenly distributed, about its center.
+
+**Skewness**
+
+ A distribution is skewed, or asymmetric, if the observations are not sym
+metrically distributed on either side of the center. A skewed-right distribution 
+(sometimes called positively skewed) has a tail that extends farther to the 
+right. A skewed-left distribution (sometimes called negatively skewed) has a 
+tail that extends farther to the left.
+
+
+Figure 278151, Figure 1.15(b), and Figure 1.15(c) illustrate a histogram for a continu
+ous numerical unimodal variable with a symmetric distribution, a skewed-right distribu
+tion and a skewed-left distribution, respectively.
+
+**Box-and-Whisker Plot**
+
+A box-and-whisker plot is a graph that describes the shape of a distribution 
+in terms of the five-number summary: the minimum value, first quartile (25th 
+percentile), the median, the third quartile (75th percentile), and the maximum 
+value. The inner box shows the numbers that span the range from the first to 
+the third quartile. A line is drawn through the box at the median. There are 
+two “whiskers.” One whisker is the line from the 25th percentile to the mini
+mum value; the other whisker is the line from the 75th percentile to the maxi
+mum value. Using Minitab, we see in Figure 27822 the shapes of the distribution of sales for these 
+four locations.(ECON278 2.2) (see png 27822)
+
+
+::::
+:::: {.column width="50%"}
+
+![278151](../images/278151.png)
+![ 27822](../images/27822.png)
+
+::::
+:::
+
+
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**Probability Distribution Function**
+
+The probability distribution function, $P(x)$, of a discrete random variable $X$ 
+represents the probability that $X$ takes the value $x$, as a function of $x$. That is,
+$$P(x) = P(X = x), \text{for all values of } x$$.
+We use the term probability distribution to represent probability distribution 
+functions in this book, following the common practice.
+
+**Required Properties of Probability Distribution for Discrete Random Variables**
+
+Let $X$ be a discrete random variable with probability distribution $P(x)$. Then,
+
+1. $0 \leq P(x) \leq 1$ for any value $x$, and  
+2. the individual probabilities sum to 1, that is,  
+   $$\sum_{x} P(x) = 1 \tag{4.1}$$  
+   where the notation indicates summation over all possible values of $x$.
+   
+   
+**Cumulative Probability distribution**
+
+The cumulative probability distribution, $F(x_0)$, of a random variable $X$, represents the probability that $X$ does not exceed the value $x_0$, as a function of $x_0$.  
+That is,  
+$$F(x_0) = P(X \leq x_0) \tag{4.2}$$  
+where the function is evaluated at all values of $x_0$.
+
+
+
+
+::::
+:::: {.column width="50%"}
+
+![ ](../images/27842.png)
+**Derived Relationship Between Probability Distribution and Cumulative Probability Distribution**
+
+Let $X$ be a random variable with probability distribution $P(x)$ and cumulative probability distribution $F(x_0)$. Then we can show that  
+$$F(x_0) = \sum_{x \leq x_0} P(x) \tag{4.3}$$  
+where the notation implies that summation is over all possible values of $x$ that are less than or equal to $x_0$.
+
+**Derived Properties of Cumulative Probability Distributions for Discrete Random Variables**
+
+Let $X$ be a discrete random variable with cumulative probability distribution $F(x_0)$. Then we can show that:
+
+1. $0 \leq F(x_0) \leq 1$ for every number $x_0$, and  
+2. if $x_0$ and $x_1$ are two numbers with $x_0 \leq x_1$, then $F(x_0) \leq F(x_1)$.
+
+
+::::
+:::
+
+
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**The Binomial Distribution**
+
+Suppose that a random experiment can result in two possible mutually exclusive and collectively exhaustive outcomes, “success” and “failure,” and that $P$ is the probability of a success in a single trial. If $n$ independent trials are carried out, the distribution of the number of resulting successes, $x$, is called the binomial distribution. Its probability distribution function for the binomial random variable $X = x$ is as follows:  
+
+$P(\text{$x$ successes in $n$ independent trials})$
+
+$$P(x) = \frac{n!}{x!(n-x)!} P^x (1-P)^{n-x} \tag{4.18}$$
+$$\text{for } x = 0, 1, 2, \ldots, n.$$
+
+
+::::
+:::: {.column width="50%"}
+
+**Mean and Variance of a Binomial Probability Distribution**
+
+Let $X$ be the number of successes in $n$ independent trials, each with a probability of success $P$. Then $X$ follows a binomial distribution with mean  
+$$\mu = E[X] = nP \tag{4.19}$$  
+and variance  
+$$\sigma_X^2 = E[(X - \mu_X)^2] = nP(1-P) \tag{4.20}$$  
+
+The derivation of the mean and variance of the binomial is shown in Section 4 of the chapter appendix.
+
+
+::::
+:::
+
+
+
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**Sampling Distributions**
+
+ Consider a random sample selected from a population that is used to make an 
+inference about some population characteristic, such as the population mean, $\mu$, using a sample statistic, such as the sample mean, $\bar{x}$. We realize that every 
+sample has different observed values and, hence, different sample means. The 
+sampling distribution of the sample mean is the probability distribution of the 
+sample means obtained from all possible samples of the same number of ob
+servations drawn from the population. Using the sampling distribution we can 
+make an inference about the population mean. (see 27861)
+
+![278611](../images/278611.png)
+
+
+::::
+:::: {.column width="50%"}
+
+![27861](../images/27861.png)
+
+**conlcusion to png 27861 and start of png 278611**
+
+We see that, although the number of years of experience for the six workers ranges 
+from 2 to 8, the possible values of the sample mean have a range from only 3.0 to 7.5. In 
+addition, more of the values lie in the central portion of the range.
+ Table 6.3 presents similar results for a sample size of $n=5$, and Figure 6.2 presents 
+the graph for the sampling distribution. Notice that the means are concentrated over a 
+narrower range. These sample means are all closer to the population mean, $\mu =5.5$. We 
+will always find this to be true—the sampling distribution becomes concentrated closer 
+to the population mean as the sample size increases. This important result provides an 
+important foundation for statistical inference. In the following sections and chapters, we 
+build a set of rigorous analysis tools on this foundation. (see 278611) (ECON278 6.1)
+
+
+
+
+::::
+:::
+
+
+---
+
+::: {.columns}
+:::: {.column width="50%"}
+
+**Standard Normal Distribution for the Sample Means**
+
+Whenever the sampling distribution of the sample means is a normal distribution, we can compute a standardized normal random variable, $Z$, that has a mean of 0 and a variance of 1:  
+
+$$Z = \frac{\bar{X} - \mu}{\sigma_{\bar{x}}} = \frac{X - \mu}{\sigma / \sqrt{n}} \tag{6.1}$$
+**Results for the Sampling Distribution of the Sample Means**
+
+Let $\bar{X}$ denote the sample mean of a random sample of $n$ observations from a population with mean $\mu_X$ and variance $\sigma^2$.  
+
+1. The sampling distribution of $\bar{X}$ has mean:  
+   $$E[\bar{X}] = \mu \tag{6.2}$$
+
+2. The sampling distribution of $\bar{X}$ has standard deviation:  
+   $$\sigma_X = \frac{\sigma}{\sqrt{n}} \tag{6.3}$$  
+   This is called the standard error of $\bar{X}$.  
+
+3. If the sample size, $n$, is not small compared to the population size, $N$, then the standard error of $\bar{X}$ is as follows:  
+   $$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N - n}{N - 1}} \tag{6.4}$$  
+
+4. If the parent population distribution is normal and, thus, the sampling distribution of the sample means is normal, then the random variable  
+   $$Z = \frac{X - \mu}{\sigma_{\bar{x}}} \tag{6.5}$$  
+   has a standard normal distribution with a mean of 0 and a variance of 1.
+
+
+::::
+:::: {.column width="50%"}
+
+Figure 6.3(27862) shows the sampling distribution of the sample means for sample sizes 
+n = 25 and n = 100 from a normal distribution. Each distribution is centered on the 
+mean, but as the sample size increases, the distribution becomes concentrated more 
+closely around the population mean because the standard error of the sample mean de
+creases as the sample size increases. Thus, the probability that a sample mean is a fixed 
+distance from the population mean decreases with increased sample size. (ECON278 2.2)
+
+![27862](../images/27862.png)
+
+
+
+::::
+:::
